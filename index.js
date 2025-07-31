@@ -20,6 +20,9 @@ const io = socketIo(server, {
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.get("/test", (req, res) => {
+  res.send("done i mean 200 OK");
+})
 
 
 // Store online users
