@@ -11,7 +11,7 @@ const server = http.createServer(app);
 // Configure Socket.IO with CORS
 const io = socketIo(server, {
   cors: {
-    origin: "https://debug-chat.vercel.app",
+    origin: "*",
     methods: ["GET", "POST"]
   }
 });
@@ -376,4 +376,5 @@ server.listen(PORT, () => {
   console.log(`📡 Socket.IO server ready for connections`);
   console.log(`🌐 Health check available at http://localhost:${PORT}`);
   console.log(`📊 Stats available at http://localhost:${PORT}/api/stats`);
-  console.log(`👥 Use
+  console.log(`👥 Users list available at http://localhost:${PORT}/api/users`);
+});
