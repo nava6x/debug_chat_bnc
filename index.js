@@ -11,7 +11,7 @@ const server = http.createServer(app);
 // Configure Socket.IO with CORS
 const io = socketIo(server, {
   cors: {
-    origin: "*",
+    origin: "https://debug-chat.vercel.app",
     methods: ["GET", "POST"]
   }
 });
